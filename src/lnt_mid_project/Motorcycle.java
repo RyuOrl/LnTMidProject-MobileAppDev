@@ -15,4 +15,11 @@ public class Motorcycle extends Vehicle{
     public int getSpecialInfo() {
     	return helm;
     }
+	
+	@Override
+	public void printSpecialInfo() {
+		System.out.println("Helm: " + helm);
+	}
+	
+	
 }

@@ -15,4 +15,9 @@ public class Car extends Vehicle{
     public int getSpecialInfo() {
     	return entertainment_system;
     }
+	
+	@Override
+	public void printSpecialInfo() {
+		System.out.println("Entertainment System: " + entertainment_system);
+	}
 }

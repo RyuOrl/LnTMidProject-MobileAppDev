@@ -46,11 +46,11 @@ public abstract class Vehicle {
 		this.name = name;
 	}
 
-	public String getLiscense_number() {
+	public String getLicense_number() {
 		return license_number;
 	}
 
-	public void setLiscense_number(String license_number) {
+	public void setLicense_number(String license_number) {
 		this.license_number = license_number;
 	}
 
@@ -86,9 +86,35 @@ public abstract class Vehicle {
 		this.type_of_vehicle = type_of_vehicle;
 	}
 	
+	public void printDetails() {
+		System.out.println("Brand: " + brand);
+		System.out.println("Name: " + name);
+		System.out.println("License Plate: " + license_number);
+		System.out.println("Type: " + type_of_vehicle);
+		System.out.println("Gas Capacity: " + gas_capacity);
+		System.out.println("Top Speed: " + + top_speed);
+		System.out.println("Wheel(s): " + + wheel);
+	}
+	
+	public void printAction() {
+		if(vehicle_type.equals("Motorcycle")) {
+			System.out.println(name + " is standing!");
+		}else {
+			System.out.println("Turning on entertainment system...");
+			if(type_of_vehicle.equals("Supercar")) {
+				System.out.println("Boosting!");
+			}
+		}
+	}
+	
+	public abstract void printSpecialInfo();
+	
 	public abstract void setSpecialInfo(int special_info);
 	
     public abstract int getSpecialInfo();
+    
+    
+    
 	
 	
 	

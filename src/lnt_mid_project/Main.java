@@ -150,29 +150,19 @@ public class Main {
     	scan.nextLine();
     	cls();
     	if(number != 0 && number > 0 && number <= vehicles.size()) {
-    		System.out.println("Brand: " + vehicles.get(number-1).getBrand());
-    		System.out.println("Name: " + vehicles.get(number-1).getName());
-    		System.out.println("License Plate: " + vehicles.get(number-1).getLiscense_number());
-    		System.out.println("Type: " + vehicles.get(number-1).getType_of_vehicle());
-    		System.out.println("Gas Capacity: " + vehicles.get(number-1).getGas_capacity());
-    		System.out.println("Top Speed: " + + vehicles.get(number-1).getTop_speed());
-    		System.out.println("Wheel(s): " + + vehicles.get(number-1).getWheel());
-    		if(vehicles.get(number-1).getVehicle_type().equals("Motorcycle")) {
-    			System.out.println("Helm: " + vehicles.get(number-1).getSpecialInfo());
-    		}else {
-    			System.out.println("Entertainment System: " + vehicles.get(number-1).getSpecialInfo());
+    		Vehicle vehicle = vehicles.get(number-1);
+    		vehicle.printDetails();
+    		vehicle.printSpecialInfo();
+    		vehicle.printAction();
+    		if(vehicle.getVehicle_type().equals("Motorcycle")) {
+    			System.out.print("Input helm price: ");
+    			int price = scan.nextInt();
+    			scan.nextLine();
+    			System.out.println("Price: " + price);
     		}
-    		
-    		if(vehicles.get(number-1).getVehicle_type().equals("Motorcycle")) {
-    			System.out.println(vehicles.get(number-1).getName() + " is standing!");
-    		}else {
-    			if(vehicles.get(number-1).getType_of_vehicle().equals("Supercar")) {
-    				System.out.println("Boosting!");
-    			}else {
-    				System.out.println("Turning on entertainment system...");
-    			}
-    		}
+    		System.out.println("ENTER to return");
     		scan.nextLine();
+    		cls();
     	}
     	
     	}while(number != 0);
